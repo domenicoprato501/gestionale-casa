@@ -35,3 +35,13 @@ if df.empty:
 else:
     st.dataframe(df, use_container_width=True, hide_index=True)
     st.write(f"**Totale: €{df['importo'].sum():,.2f}**")
+if not st.user.is_logged_in:
+    st.title("🏠 Gestionale Casa")
+    st.markdown("Accedi con il tuo account Google per continuare.")
+    st.button("Entra con Google", on_click=st.login, type="primary")
+    # Forza la logout globale sul primo avvio
+    if st.session_state.get("_force_logout", False):
+        st.logout()
+        st.stop()
+    st.session_state["_force_logout"] = True
+    st.stop()
