@@ -1,0 +1,4 @@
+casa.db
+serviceAccount.json
+__pycache__/
+*.pyc
