@@ -45,4 +45,3 @@ if not st.user.is_logged_in:
         st.stop()
     st.session_state["_force_logout"] = True
     st.stop()
- git add app.py && git commit -m "Forza logout per nuovo utente" && git push
