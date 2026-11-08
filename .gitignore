@@ -3,3 +3,6 @@ serviceAccount.json
 __pycache__/
 *.pyc
 .gestionale-venv*
+git add .gitignore
+git commit -m "Ignora secrets.toml"
+git push
